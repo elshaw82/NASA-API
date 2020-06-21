@@ -4,12 +4,14 @@ https://api.nasa.gov/planetary/apod?api_key=ZqqXSvQeW0U0C2UFDxlMAFO2K02LqWMIUeRK
 document.addEventListener('DOMContentLoaded', () => {
 const generateBtn = document.querySelector('.generate')
 const title = document.querySelector('.title')
-const imgBox = document.querySelector('.imgBox')
+const newImg = document.querySelector('.newImg')
 const imgDescription = document.querySelector('.imgDescription')
 const copyright = document.querySelector('.copyright')
 
-// generateBtn.addEventListener('click', displayAPOD)
+generateBtn.addEventListener('click', displayAPOD)
 
+
+function displayAPOD() {
 
 fetch('https://api.nasa.gov/planetary/apod?api_key=ZqqXSvQeW0U0C2UFDxlMAFO2K02LqWMIUeRKeCoo')
     .then(response => {
@@ -23,11 +25,13 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=ZqqXSvQeW0U0C2UFDxlMAFO2K02Lq
         const imgCopyright = data.copyright
 
         title.innerHTML = imgTitle + ' ' + ' | ' + imgDate
-        imgBox.src="${imgUrl}"
-
+        copyright.innerHTML = imgCopyright
+        imgDescription.innerHTML = description
+        newImg.setAttribute("src", imgUrl)
+        
     
     })
 
- 
+}
 
 })

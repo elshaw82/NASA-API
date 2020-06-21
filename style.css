@@ -4,9 +4,52 @@
     padding:0;
 }
 
+body {
+    color:#333333;
+    background-color: navy;
+}
+
 .container {
+    margin-top:50px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width:600px;
+    height:100vh;   
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding:24px;
+    text-align: center;
     
 }
 
+.imgBox {
+   
+    padding:10px;
+    width:500px;
+
+}
+
+.logo {
+    width:200px;
+    height:100px;
+
+}
+
+
+.generate {
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    outline: none;
+    border:none;
+}
+
+.newImg {
+    object-fit: cover;
+    width:480px;
+}
