@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
-* {
+/* * {
     box-sizing: border-box;
     margin:0;
     padding:0;
 }
+*/
 
 body {
     color:#ffffff;
-    background-image: url(images/free-space-background-01.jpg);   
+    background-image: url(https://github.com/elshaw82/NASA-API/blob/master/images/free-space-background-01.jpg?raw=true);   
 }
 
-.container {
-    background-image: linear-gradient(180deg,
-        rgba(42, 0, 90, 0.45), 
-        rgba(6, 0, 26, 0.85));
+.container {   
     position: absolute;
     left:50%;
     top:50%;
@@ -24,7 +22,7 @@ body {
     justify-content: center;
     align-items: center;
     width:100vw;   
-    height:1080px;
+    height:auto;
     margin-bottom: 20px;
     padding-top:50px;
 }
@@ -35,19 +33,24 @@ h1, h2, h3 {
 }
 
 .header {
-
     margin-top: 50px;
     display:flex;
     justify-content: baseline;
     align-items: center;
 }
 
+.add-margin {
+    margin-top:300px;
+}
+
 h1 {
-   font-size:34px; 
+   font-size:34px;
+   margin-bottom:20px;
 }
 
 h2 {
     font-size:21px;
+    margin-top:20px;
 }
 
 h3 {
@@ -61,12 +64,8 @@ h3 {
     outline:none;
 }
 
-.imgBox > img {
-    border-radius:40px;
-}
-
 .border {
-    border:solid 5px white;
+    border:solid 2px white;
 }
 
 .copyright {
@@ -77,14 +76,15 @@ h3 {
 }
 
 .imgDescription {
-    width:700px;
+    width:800px;
     font-family: monospace;
     line-height: 25px;
+    padding:20px;
+    margin-bottom: 20px;
 }
 
-
-.newImage {
-    width:400px;
+.textBackground {
+    background-color:rgba(255, 255, 255, 0.151);
 }
 
 img.newImage {
@@ -102,14 +102,19 @@ img.newImage {
     border-radius: 8px;
     outline: none;
     border:solid white 2px;
-    background-color: transparent;
+    background-color: white;
     font-family: 'Rajdhani', sans-serif;
     font-size: 18px;
-    color: white;
+    color: navy;
     letter-spacing: 5px;
     text-transform: uppercase;
     margin:20px;
     padding:5px;
+    box-shadow: 3px 3px 10px black;
+}
+
+button:active {
+    box-shadow: inset 3px 3px 10px black;
 }
 
 .title {
@@ -119,4 +124,41 @@ img.newImage {
 .newImg {
     object-fit: cover;
     width:480px;
+}
+
+  @media only screen and (max-width: 600px) {
+    
+    .imgBox {
+      text-align:center;
+      padding:none;
+      width:320px;
+      border:none;
+      outline:none;
+  }
+   
+    .imgDescription {
+        width:320px; 
+        padding:10px;     
+    }
+
+   .newImg {
+    object-fit: cover;
+    width:320px;
+}
+    
+    h2 {
+      margin-top:5px;
+      font-size:14px;
+    }
+    
+    h1 {
+   font-size:21px;
+   margin-bottom:5px;
+}
+    
+    .add-margin {
+    margin-top:250px;
+}
+    
+ 
 }

@@ -25,11 +25,14 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=ZqqXSvQeW0U0C2UFDxlMAFO2K02Lq
         const imgCopyright = data.copyright
 
         title.innerHTML = imgTitle + ' ' + ' <br/> ' + imgDate
-        copyright.innerHTML = imgCopyright
+        copyright.innerHTML = imgCopyright + ' ' + '&copy;'
         imgDescription.innerHTML = description
         newImg.setAttribute("src", imgUrl)
         newImg.classList.add('border')
         generateBtn.remove()
+        document.querySelector('.header').classList.add('add-margin')
+        imgDescription.classList.add('textBackground')
+        document.querySelector('.title').classList.add('add-margin')
     
     })
 
