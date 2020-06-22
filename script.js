@@ -18,17 +18,18 @@ fetch('https://api.nasa.gov/planetary/apod?api_key=ZqqXSvQeW0U0C2UFDxlMAFO2K02Lq
         return response.json()
     })
     .then(data => {
-        const imgUrl = data.hdurl
+        const imgUrl = data.url
         const imgDate = data.date
         const description = data.explanation
         const imgTitle = data.title
         const imgCopyright = data.copyright
 
-        title.innerHTML = imgTitle + ' ' + ' | ' + imgDate
+        title.innerHTML = imgTitle + ' ' + ' <br/> ' + imgDate
         copyright.innerHTML = imgCopyright
         imgDescription.innerHTML = description
         newImg.setAttribute("src", imgUrl)
-        
+        newImg.classList.add('border')
+        generateBtn.remove()
     
     })
 
